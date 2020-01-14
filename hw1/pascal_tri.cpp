@@ -39,8 +39,13 @@ int main() {
 
     //std::cout << "project name: " << PROJECT_NAME << " version: " << PROJECT_VER << std::endl;
     std::cout << std::endl;
+    std::cout<< "what many lines do you want to print of a pascal's triangle?"<<std::endl;
+    std::cout<<"(just let it be a POSITIVE NUMBER and save me some time ...)"<<std::endl;
+    
+    int LINES=0;
+    std::cin>>LINES;
     std::vector<std::vector<int>> tris(1,std::vector<int>{1});
-    int bricksize = pascal(tris,8)+2;  // default output 8 numbers of lines.
+    int bricksize = pascal(tris,LINES)+2;  // default output 8 numbers of lines.
     std::vector<std::string> outputs;
     for(auto it=tris.begin();it!=tris.end();++it)
     {

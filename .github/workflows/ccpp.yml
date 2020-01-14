@@ -12,4 +12,4 @@ jobs:
     - name: configure
       run: cd hw1 && cd build && cmake -DCMAKE_CXX_FLAGS="-Werror" ..
     - name: make
-      run: make
+      run: ls && make

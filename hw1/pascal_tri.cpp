@@ -1,7 +1,7 @@
 #include <vector>
 #include <iostream>
 
-#include "build/config.h"
+#include "config.h"
 
 int pascal(std::vector<std::vector<int>>& map, int n) // n is the number of lines of Pascal's triangle
 {
@@ -37,11 +37,10 @@ int pascal(std::vector<std::vector<int>>& map, int n) // n is the number of line
 
 int main() {
 
-    //std::cout << "project name: " << PROJECT_NAME << " version: " << PROJECT_VER << std::endl;
+    std::cout << "project name: " << PROJECT_NAME << " version: " << PROJECT_VER << std::endl;
     std::cout << std::endl;
     std::cout<< "what many lines do you want to print of a pascal's triangle?"<<std::endl;
     std::cout<<"(just let it be a POSITIVE NUMBER and save me some time ...)"<<std::endl;
-    
     int LINES=0;
     std::cin>>LINES;
     std::vector<std::vector<int>> tris(1,std::vector<int>{1});

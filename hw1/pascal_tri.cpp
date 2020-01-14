@@ -1,7 +1,7 @@
 #include <vector>
 #include <iostream>
 
-#include "config.h"
+#include "build/config.h"
 
 int pascal(std::vector<std::vector<int>>& map, int n) // n is the number of lines of Pascal's triangle
 {

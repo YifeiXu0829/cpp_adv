@@ -11,5 +11,5 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(build/pascaltriangle pascal_tri.cpp)
-add_executable(build/frame frame.cpp)
+add_executable(pascaltriangle pascal_tri.cpp)
+add_executable(frame frame.cpp)

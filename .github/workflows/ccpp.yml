@@ -10,6 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: configure
-      run: cmake hw1/
+      run: cmake -DCMAKE_CXX_FLAGS="-Werror" hw1/
     - name: make
-      run: make
+      run: cd hw1 && make

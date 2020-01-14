@@ -1,0 +1,15 @@
+HW 1.4
+
+// CProgramButNotcpp.cpp
+int main()
+{
+	int new = 0;
+	return new;
+}
+
+THe above program will not compile in C++ since syntax 'new' is specific for C++ thus it can not be used as a variable name in C++. However, it will compile in C since C does not have 'new' as syntax.
+
+
+HW 1.5
+
+well .. I will venture a guess here .. the author named it C++ by putting "++" operator after C is because users first experience C++ think they are using C, but actually after experiencing it, users will think it is much better than C. If using ++C, by the definiton of forward "++" operator, it means it already surpasses C even before using it. (although both namings work fo me :P)

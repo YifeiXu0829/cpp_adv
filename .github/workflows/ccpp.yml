@@ -10,6 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: configure
-      run: hw1/cmake hwq/
+      run: hw1/cmake hw1/
     - name: make
       run: make

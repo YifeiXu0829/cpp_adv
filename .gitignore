@@ -4,3 +4,10 @@ hw1/Makefile
 hw1/cmake_install.cmake
 hw1/build/*
 hw1/config.h
+
+hw2/CMakeCache.txt
+hw2/CMakeFiles
+hw2/Makefile
+hw2/cmake_install.cmake
+hw2/build/*
+hw2/config.h

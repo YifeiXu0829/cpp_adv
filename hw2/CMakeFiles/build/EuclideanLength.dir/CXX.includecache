@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/yifeix/git/cpp_adv/hw2/EuclideanLength.cpp
+iostream
+-
+algorithm
+-
+vector
+-
+unordered_map
+-
+cmath
+-
+numeric
+-
+

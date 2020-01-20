@@ -1,7 +1,7 @@
 #include <vector>
 #include <iostream>
 
-#include "config.h"
+
 #include "pascal_tri_oop.h"
 
 
@@ -81,9 +81,8 @@ void PascalTriangle::print()
     std::cout << std::endl;
 }
 
-int main() {
-
-    std::cout << "project name: " << PROJECT_NAME << " version: " << PROJECT_VER << std::endl;
+int main() 
+{
     std::cout << std::endl;
     std::cout<< "what many lines do you want to print of a pascal's triangle?"<<std::endl;
     std::cout<<"(just let it be a POSITIVE NUMBER and save me some time ...)"<<std::endl;

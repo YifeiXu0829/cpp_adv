@@ -4,7 +4,7 @@ if(POLICY CMP0048)
       cmake_policy(SET CMP0048 NEW)
 endif()
 
-project (EuclideanLength VERSION "1.0.0")
+project (EuclideanLength VERSION "1.1.0")
 configure_file(config.h.in config.h)
 
 set(CMAKE_CXX_STANDARD 11)

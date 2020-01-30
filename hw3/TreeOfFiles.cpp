@@ -97,7 +97,27 @@ class PathsToTree
         }
         void print()
         {
+            printTree(&root_,0);
+        }
 
+        void printTree(const std::unique_ptr<Node>* node, int level)
+        {
+            if(*node)
+            {
+                //std::cout<<"|";
+                for(int i=0;i<level*2;++i)
+                {
+                    std::cout<<" |";
+                }
+                //std::cout<<"|";
+                std::cout<< (*node)->name_ <<std::endl;
+                std::vector<std::unique_ptr<Node>>& nodes = (*node)->nodes_;
+                ++level;
+                for(auto it=nodes.begin();it!=nodes.end();++it)
+                {
+                    printTree(&(*it),level);
+                }
+            }
         }
     private:
         std::string filename_;

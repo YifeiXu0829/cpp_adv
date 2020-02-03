@@ -2,74 +2,43 @@
 #include <memory>
 
 
-template<typename T>
+
 class A
 {
     public:
         
-        A() = default ;
+        A()
+        {
+            //std::cout<<"default c-tor is called\n";
+        }
         ~A() = default;
-        A(T v):value_(v)
-        {
-            //std::cout<<"user-defined constructor is called \n";
-        }
-        
-        A(const A&) = delete;
-       
-        A(A& copy)
-        {
-            value_ = copy.value_;
-            std::cout<<"copy constructor is called \n";
-        }
-        
+        A(A&) = delete;
+        //{
+            //std::cout<<"copy c-tor is called\n";
+        //}
         A(A&& copy)
         {
-            value_ = copy.value_;
-            std::cout<<"move constructor is called \n";
+            std::cout<<"move c-tor is called\n";
         }
-        
-        /* what is this called ???
-        A(T&& v):value_(std::move(v))
-        {
-            std::cout<<" a weird constructor is called \n";
-        }
-        */
 
-        A& operator=(const A& copy)
+
+        A& operator=(A& copy)
         {
-            value_ = copy.value_;
-            std::cout<<"copy assignment is called \n";
             return *this;
         }
-
-        A& operator=(A&& copy)
-        {
-             value_ = copy.value_;
-             std::cout<<"move assignment is called \n";
-             return *this;
-        }
-
-
-    public:
-        T value_;
 };
 
-
-template<typename T>
-A<T> f(T a)
+A f()
 {
-    return A<T>(a);
+    return A();
 }
 
 
 int main()
 {
-    int test = 567;
-    //A<int> a = A<int>(123);
-    //A<int> b = f(test);
-    //A<int> c = a; //  copy c-tor
-    //A<int> d;
-    //d = a; // copy assignment
-    std::cout<<"\n";
-    A<int> pleasework = f(test);
+    A a =std::move(f());
+    //A a_copy = a; will not compile since copy c-tor is deleted.
+    A a_move = std::move(a);
+
+    return 0;
 }

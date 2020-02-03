@@ -12,6 +12,8 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+SET(CMAKE_CXX_FLAGS "-O0")
+SET(CMAKE_C_FLAGS "-O0")
 add_executable(build/move move.cpp)
 add_executable(build/concurrency concurrency.cpp)
 add_executable(build/stack stack.cpp)

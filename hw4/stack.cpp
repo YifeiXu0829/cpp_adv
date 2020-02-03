@@ -2,7 +2,7 @@
 #include <mutex>
 #include <memory>
 #include <iostream>
-
+#include <optional>
 template<typename T> class Node
 {
     public:
@@ -28,7 +28,7 @@ template<typename T> class Stack
             head_ = std::move(node); // swap between current head resrc and new node resrc, thus current head points to new node, and new node held current head's resrc which is null and will be destructed when new node goes out of scope.
             ++size_;
         }
-        [[nodiscard]]  auto pop() noexcept
+        [[nodiscard]] std::optional<T> pop() noexcept
         {
             const std::lock_guard<std::mutex> lock(mutex_);
             if(size_)
@@ -38,6 +38,7 @@ template<typename T> class Stack
                 --size_;
                 return ret;
             }
+            return {};
             // undefined behavior ! always check size before you pop
         }
 
@@ -70,7 +71,12 @@ int main()
     {
         if(!stack.empty())
         {
-            std::cout<<stack.pop()<<" ";
+            std::optional<std::string> ret = stack.pop();
+            if(ret.has_value())
+            {
+                std::cout<<*ret<<" ";
+            }
+            //std::cout<<stack.pop()<<" ";
         }
     }
     std::cout<<std::endl;

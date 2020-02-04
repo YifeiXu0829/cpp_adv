@@ -21,6 +21,14 @@ template<typename T> class Stack
 
         }
         ~Stack() = default;
+        Stack(const Stack<T>&) = delete;
+        Stack(Stack<T>&& copy)
+        {
+            // swap resource location
+            size_ = copy.size();
+            head_ = std::move((copy.get_head_ref()).get());
+            
+        }
         void push(T a) noexcept
         {
             const std::lock_guard<std::mutex> lock(mutex_);
@@ -64,6 +72,16 @@ template<typename T> class Stack
                return {};
                // better check size before you back()
         }
+
+        [[deprecated]] auto get_head_ptr() // old-school, do not like it
+        {
+            return &head_;
+        }
+
+        auto get_head_ref()
+        {
+               return std::ref(head_);
+        }
     private:
         int size_;
         std::mutex mutex_;
@@ -84,12 +102,13 @@ int main()
         std::cout<<i<<" ";
     }
 
+    Stack<std::string> stack_copy = std::move(stack);
     std::cout<<std::endl;
     for(int i=0;i<11;++i)
     {
-        if(!stack.empty())
+        if(!stack_copy.empty())
         {
-            std::optional<std::string> ret = stack.pop();
+            std::optional<std::string> ret = stack_copy.pop();
             if(ret.has_value())
             {
                 std::cout<<*ret<<" ";

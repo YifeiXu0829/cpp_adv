@@ -3,6 +3,7 @@
 #include <memory>
 #include <iostream>
 #include <optional>
+
 template<typename T> class Node
 {
     public:
@@ -39,12 +40,29 @@ template<typename T> class Stack
                 return ret;
             }
             return {};
-            // undefined behavior ! always check size before you pop
+            // better check size before you pop
         }
 
-        bool empty() noexcept
+        bool empty() noexcept // always do empty check before pop() !
         {
             return size_?0:1;
+        }
+
+        int size() noexcept
+        {
+            return size_;
+        }
+
+        [[nodiscard]] std::optional<T> back() noexcept
+        {
+               const std::lock_guard<std::mutex> lock(mutex_);
+               if(size_)
+               {
+                   T ret = head_->value_;
+                   return ret;
+               }
+               return {};
+               // better check size before you back()
         }
     private:
         int size_;

@@ -17,7 +17,7 @@ void _func_with_lock(int& counter)
 
 void _func_without_lock(int& counter)
 {
-    for(int i=0;i<999;++i)
+    for(;;)
     {
 		std::stringstream ss;
 		ss << std::this_thread::get_id();

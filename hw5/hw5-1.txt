@@ -1,0 +1,18 @@
+since my laptop has only two cores (4 threads), I changed it to count to 10'000'000 using 4 threads otherwise the program will die hanging ..
+
+distributed counter 1 runs approximately 20'000 ms --- single memory location, locks maintain each time only 1 thread can access to counter object, each thread trying to modify data so caches invalidate with each other, everytime core gets counter object from main memory, longest clock cycle.
+
+distributed counter 2 runs from 2'000 ms to 5'000ms  --- 4 (of 128) unique main memory location, each location only can be accessed for a unique thread and 4 threads run completely parallel. No two thread will use the same lock but locks are still being used by each thread grabbing and releasing. However sometimes multiple of the 4 memory locations could be in the same cache line causing false sharing, which invalidate the cache and go to main memory. Thus running times varies greatly each time.
+
+distributed counter 3 runs approximately 1'800 ms --- since each bucket size gor increased enough to make sure one cache line will not contain more than 1 bucket. Thus disabled false sharing problem from distributedcounter2 example, making running time stable and close to the best running time of distributedcounter2.
+
+distributed counter 1 runs approximately 900 ms --- disabled locking mechanism completely from distributedcounter3 thus improved running time greatly.
+
+
+Insight:
+
+1. For operations on a unique thread, you want to put corresponding data(data that will not be accessed to other thread) in the cache as much as possible, to gain the performance of getting data from cache instead of main memory.
+
+2. For objects that will be accessed by different threads (not shared !), keep each size of them at least two cache line (std::hardware_destructive_interference_size) bigger to disabled false sharing, and disabled cache invalidation of different cores.
+
+3. For data that will be shared by different thread, tried to use atomic instead of locks as much as possible to become lock-free and gain performance.

@@ -116,6 +116,18 @@ public:
 	}
 };
 
+template <typename T>
+class Matrix<T,2,2> : public MatrixCommon <T,2,2>
+{
+  public:
+    Matrix() = default;
+    Matrix(initializer_list<initializer_list<T>> init):MatrixCommon<T,2,2>(init) {}
+    T determinant() const
+    {
+        return MatrixCommon <T,2,2>::data[0][0]*MatrixCommon <T,2,2>::data[1][1] - MatrixCommon <T,2,2>::data[1][0]*MatrixCommon <T,2,2>::data[0][1];
+    }
+};
+
 template<typename T, int a, int b, int c>
 inline Matrix<T, a, c>
 operator*(Matrix<T, a, b> const &l, Matrix<T, b, c> const &r)

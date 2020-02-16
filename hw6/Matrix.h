@@ -112,6 +112,12 @@ Matrix<1, 1>::determinant() const
 	return data[0][0];
 }
 
+template<>
+double Matrix<2,2>::determinant() const
+{
+    return data[0][0]*data[1][1] - data[1][0]*data[0][1];
+}
+
 template<int a, int b, int c>
 inline Matrix<a, c>
 operator*(Matrix<a, b> const &l, Matrix<b, c> const &r)

@@ -112,6 +112,12 @@ determinantImpl(const Matrix<T, 1, 1> &m)
 	return m(0, 0);
 }
 
+template<class T>
+T determinantImpl(const Matrix<T, 2, 2> &m)
+{
+     return m(0, 0)*m(1,1) - m(1,0)*m(0,1);
+}
+
 template<class T, int h, int w>
 T
 Matrix<T, h, w>::determinant() const

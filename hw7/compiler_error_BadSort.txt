@@ -1,0 +1,405 @@
+In file included from /Users/yifeix/git/cpp_adv/hw7/sort_wrapper.cpp:1:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/iostream:38:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/ios:216:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/__locale:15:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/string:500:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/string_view:176:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/__string:56:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm:3924:40: error: invalid operands to binary expression ('std::__1::__list_iterator<int, void *>' and 'std::__1::__list_iterator<int, void *>')
+        difference_type __len = __last - __first;
+                                ~~~~~~ ^ ~~~~~~~
+/Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm:4117:5: note: in instantiation of function template specialization 'std::__1::__sort<std::__1::__less<int, int> &, std::__1::__list_iterator<int, void *> >' requested here
+    __sort<_Comp_ref>(__first, __last, __comp);
+    ^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm:4126:12: note: in instantiation of function template specialization 'std::__1::sort<std::__1::__list_iterator<int, void *>, std::__1::__less<int, int> >' requested here
+    _VSTD::sort(__first, __last, __less<typename iterator_traits<_RandomAccessIterator>::value_type>());
+           ^
+/Users/yifeix/git/cpp_adv/hw7/sort_wrapper.cpp:8:10: note: in instantiation of function template specialization 'std::__1::sort<std::__1::__list_iterator<int, void *> >' requested here
+    std::sort(t.begin(),t.end());
+         ^
+/Users/yifeix/git/cpp_adv/hw7/sort_wrapper.cpp:16:5: note: in instantiation of function template specialization 'bad_sort<std::__1::list<int, std::__1::allocator<int> > >' requested here
+    bad_sort(l);
+    ^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:743:1: note: candidate template ignored: could not match 'reverse_iterator' against '__list_iterator'
+operator-(const reverse_iterator<_Iter1>& __x, const reverse_iterator<_Iter2>& __y)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:1184:1: note: candidate template ignored: could not match 'move_iterator' against '__list_iterator'
+operator-(const move_iterator<_Iter1>& __x, const move_iterator<_Iter2>& __y)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:1592:1: note: candidate template ignored: could not match '__wrap_iter' against '__list_iterator'
+operator-(const __wrap_iter<_Iter1>& __x, const __wrap_iter<_Iter2>& __y) _NOEXCEPT_DEBUG
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:553:11: note: candidate template ignored: could not match 'fpos' against '__list_iterator'
+streamoff operator-(const fpos<_StateT>& __x, const fpos<_StateT>& __y)
+          ^
+In file included from /Users/yifeix/git/cpp_adv/hw7/sort_wrapper.cpp:1:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/iostream:38:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/ios:216:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/__locale:15:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/string:500:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/string_view:176:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/__string:56:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm:4015:33: error: invalid operands to binary expression ('std::__1::__list_iterator<int, void *>' and 'std::__1::__list_iterator<int, void *>')
+                        if (__i >= __j)
+                            ~~~ ^  ~~~
+/Library/Developer/CommandLineTools/usr/include/c++/v1/utility:610:1: note: candidate template ignored: could not match 'pair' against '__list_iterator'
+operator>=(const pair<_T1,_T2>& __x, const pair<_T1,_T2>& __y)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:726:1: note: candidate template ignored: could not match 'reverse_iterator' against '__list_iterator'
+operator>=(const reverse_iterator<_Iter1>& __x, const reverse_iterator<_Iter2>& __y)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:1167:1: note: candidate template ignored: could not match 'move_iterator' against '__list_iterator'
+operator>=(const move_iterator<_Iter1>& __x, const move_iterator<_Iter2>& __y)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:1543:1: note: candidate template ignored: could not match '__wrap_iter' against '__list_iterator'
+operator>=(const __wrap_iter<_Iter1>& __x, const __wrap_iter<_Iter2>& __y) _NOEXCEPT_DEBUG
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:1575:1: note: candidate template ignored: could not match '__wrap_iter' against '__list_iterator'
+operator>=(const __wrap_iter<_Iter1>& __x, const __wrap_iter<_Iter1>& __y) _NOEXCEPT_DEBUG
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/tuple:1198:1: note: candidate template ignored: could not match 'tuple' against '__list_iterator'
+operator>=(const tuple<_Tp...>& __x, const tuple<_Up...>& __y)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/memory:2991:1: note: candidate template ignored: could not match 'unique_ptr' against '__list_iterator'
+operator>=(const unique_ptr<_T1, _D1>& __x, const unique_ptr<_T2, _D2>& __y) {return !(__x < __y);}
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/memory:3078:1: note: candidate template ignored: could not match 'unique_ptr' against '__list_iterator'
+operator>=(const unique_ptr<_T1, _D1>& __x, nullptr_t)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/memory:3086:1: note: candidate template ignored: could not match 'unique_ptr' against '__list_iterator'
+operator>=(nullptr_t, const unique_ptr<_T1, _D1>& __x)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/memory:4838:1: note: candidate template ignored: could not match 'shared_ptr' against '__list_iterator'
+operator>=(const shared_ptr<_Tp>& __x, const shared_ptr<_Up>& __y) _NOEXCEPT
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/memory:4926:1: note: candidate template ignored: could not match 'shared_ptr' against '__list_iterator'
+operator>=(const shared_ptr<_Tp>& __x, nullptr_t) _NOEXCEPT
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/memory:4934:1: note: candidate template ignored: could not match 'shared_ptr' against '__list_iterator'
+operator>=(nullptr_t, const shared_ptr<_Tp>& __x) _NOEXCEPT
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string_view:748:6: note: candidate template ignored: could not match 'basic_string_view' against '__list_iterator'
+bool operator>=(basic_string_view<_CharT, _Traits> __lhs, basic_string_view<_CharT, _Traits> __rhs) _NOEXCEPT
+     ^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string_view:756:6: note: candidate template ignored: could not match 'basic_string_view' against '__list_iterator'
+bool operator>=(basic_string_view<_CharT, _Traits> __lhs,
+     ^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string_view:764:6: note: candidate template ignored: could not match 'basic_string_view' against '__list_iterator'
+bool operator>=(typename common_type<basic_string_view<_CharT, _Traits> >::type __lhs,
+     ^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:3965:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator>=(const basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:3974:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator>=(const basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:3983:1: note: candidate template ignored: could not match 'const _CharT *' against 'std::__1::__list_iterator<int, void *>'
+operator>=(const _CharT* __lhs,
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/list:2430:1: note: candidate template ignored: could not match 'list' against '__list_iterator'
+operator>=(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/vector:3373:1: note: candidate template ignored: could not match 'vector' against '__list_iterator'
+operator>=(const vector<_Tp, _Allocator>& __x, const vector<_Tp, _Allocator>& __y)
+^
+In file included from /Users/yifeix/git/cpp_adv/hw7/sort_wrapper.cpp:1:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/iostream:38:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/ios:216:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/__locale:15:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/string:500:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/string_view:176:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/__string:56:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm:4039:17: error: invalid operands to binary expression ('std::__1::__list_iterator<int, void *>' and 'std::__1::__list_iterator<int, void *>')
+        if (__i < __j)
+            ~~~ ^ ~~~
+/Library/Developer/CommandLineTools/usr/include/c++/v1/system_error:306:1: note: candidate function not viable: no known conversion from 'std::__1::__list_iterator<int, void *>' to 'const std::__1::error_condition' for 1st argument
+operator<(const error_condition& __x, const error_condition& __y) _NOEXCEPT
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/system_error:383:1: note: candidate function not viable: no known conversion from 'std::__1::__list_iterator<int, void *>' to 'const std::__1::error_code' for 1st argument
+operator<(const error_code& __x, const error_code& __y) _NOEXCEPT
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/utility:594:1: note: candidate template ignored: could not match 'pair' against '__list_iterator'
+operator< (const pair<_T1,_T2>& __x, const pair<_T1,_T2>& __y)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:702:1: note: candidate template ignored: could not match 'reverse_iterator' against '__list_iterator'
+operator<(const reverse_iterator<_Iter1>& __x, const reverse_iterator<_Iter2>& __y)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:1143:1: note: candidate template ignored: could not match 'move_iterator' against '__list_iterator'
+operator<(const move_iterator<_Iter1>& __x, const move_iterator<_Iter2>& __y)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:1515:1: note: candidate template ignored: could not match '__wrap_iter' against '__list_iterator'
+operator<(const __wrap_iter<_Iter1>& __x, const __wrap_iter<_Iter2>& __y) _NOEXCEPT_DEBUG
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/tuple:1182:1: note: candidate template ignored: could not match 'tuple' against '__list_iterator'
+operator<(const tuple<_Tp...>& __x, const tuple<_Up...>& __y)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/memory:2970:1: note: candidate template ignored: could not match 'unique_ptr' against '__list_iterator'
+operator< (const unique_ptr<_T1, _D1>& __x, const unique_ptr<_T2, _D2>& __y)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/memory:3028:1: note: candidate template ignored: could not match 'unique_ptr' against '__list_iterator'
+operator<(const unique_ptr<_T1, _D1>& __x, nullptr_t)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/memory:3037:1: note: candidate template ignored: could not match 'unique_ptr' against '__list_iterator'
+operator<(nullptr_t, const unique_ptr<_T1, _D1>& __x)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/memory:4808:1: note: candidate template ignored: could not match 'shared_ptr' against '__list_iterator'
+operator<(const shared_ptr<_Tp>& __x, const shared_ptr<_Up>& __y) _NOEXCEPT
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/memory:4878:1: note: candidate template ignored: could not match 'shared_ptr' against '__list_iterator'
+operator<(const shared_ptr<_Tp>& __x, nullptr_t) _NOEXCEPT
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/memory:4886:1: note: candidate template ignored: could not match 'shared_ptr' against '__list_iterator'
+operator<(nullptr_t, const shared_ptr<_Tp>& __x) _NOEXCEPT
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string_view:673:6: note: candidate template ignored: could not match 'basic_string_view' against '__list_iterator'
+bool operator<(basic_string_view<_CharT, _Traits> __lhs, basic_string_view<_CharT, _Traits> __rhs) _NOEXCEPT
+     ^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string_view:680:6: note: candidate template ignored: could not match 'basic_string_view' against '__list_iterator'
+bool operator<(basic_string_view<_CharT, _Traits> __lhs,
+     ^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string_view:688:6: note: candidate template ignored: could not match 'basic_string_view' against '__list_iterator'
+bool operator<(typename common_type<basic_string_view<_CharT, _Traits> >::type __lhs,
+     ^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:3878:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator< (const basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:3887:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator< (const basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:3896:1: note: candidate template ignored: could not match 'const _CharT *' against 'std::__1::__list_iterator<int, void *>'
+operator< (const _CharT* __lhs,
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/list:2406:1: note: candidate template ignored: could not match 'list' against '__list_iterator'
+operator< (const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/vector:3357:1: note: candidate template ignored: could not match 'vector' against '__list_iterator'
+operator< (const vector<_Tp, _Allocator>& __x, const vector<_Tp, _Allocator>& __y)
+^
+In file included from /Users/yifeix/git/cpp_adv/hw7/sort_wrapper.cpp:1:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/iostream:38:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/ios:216:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/__locale:15:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/string:500:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/string_view:176:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/__string:56:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm:4073:65: error: invalid operands to binary expression ('std::__1::__list_iterator<int, void *>' and 'int')
+            if (_VSTD::__insertion_sort_incomplete<_Compare>(__i+1, __last, __comp))
+                                                             ~~~^~
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:761:1: note: candidate template ignored: could not match 'reverse_iterator<type-parameter-0-0>' against 'int'
+operator+(typename reverse_iterator<_Iter>::difference_type __n, const reverse_iterator<_Iter>& __x)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:1202:1: note: candidate template ignored: could not match 'move_iterator<type-parameter-0-0>' against 'int'
+operator+(typename move_iterator<_Iter>::difference_type __n, const move_iterator<_Iter>& __x)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:1618:1: note: candidate template ignored: could not match '__wrap_iter<type-parameter-0-0>' against 'int'
+operator+(typename __wrap_iter<_Iter>::difference_type __n,
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:3993:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator+(const basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4006:1: note: candidate template ignored: could not match 'const _CharT *' against 'std::__1::__list_iterator<int, void *>'
+operator+(const _CharT* __lhs , const basic_string<_CharT,_Traits,_Allocator>& __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4018:1: note: candidate template ignored: could not match 'basic_string<type-parameter-0-0, type-parameter-0-1, type-parameter-0-2>' against 'int'
+operator+(_CharT __lhs, const basic_string<_CharT,_Traits,_Allocator>& __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4029:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator+(const basic_string<_CharT, _Traits, _Allocator>& __lhs, const _CharT* __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4041:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator+(const basic_string<_CharT, _Traits, _Allocator>& __lhs, _CharT __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4055:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator+(basic_string<_CharT, _Traits, _Allocator>&& __lhs, const basic_string<_CharT, _Traits, _Allocator>& __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4063:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator+(const basic_string<_CharT, _Traits, _Allocator>& __lhs, basic_string<_CharT, _Traits, _Allocator>&& __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4071:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator+(basic_string<_CharT, _Traits, _Allocator>&& __lhs, basic_string<_CharT, _Traits, _Allocator>&& __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4079:1: note: candidate template ignored: could not match 'const _CharT *' against 'std::__1::__list_iterator<int, void *>'
+operator+(const _CharT* __lhs , basic_string<_CharT,_Traits,_Allocator>&& __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4087:1: note: candidate template ignored: could not match 'basic_string<type-parameter-0-0, type-parameter-0-1, type-parameter-0-2>' against 'int'
+operator+(_CharT __lhs, basic_string<_CharT,_Traits,_Allocator>&& __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4096:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator+(basic_string<_CharT, _Traits, _Allocator>&& __lhs, const _CharT* __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4104:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator+(basic_string<_CharT, _Traits, _Allocator>&& __lhs, _CharT __rhs)
+^
+In file included from /Users/yifeix/git/cpp_adv/hw7/sort_wrapper.cpp:1:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/iostream:38:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/ios:216:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/__locale:15:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/string:500:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/string_view:176:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/__string:56:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm:4090:17: error: invalid operands to binary expression ('std::__1::__list_iterator<int, void *>' and 'std::__1::__list_iterator<int, void *>')
+        if (__i - __first < __last - __i)
+            ~~~ ^ ~~~~~~~
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:743:1: note: candidate template ignored: could not match 'reverse_iterator' against '__list_iterator'
+operator-(const reverse_iterator<_Iter1>& __x, const reverse_iterator<_Iter2>& __y)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:1184:1: note: candidate template ignored: could not match 'move_iterator' against '__list_iterator'
+operator-(const move_iterator<_Iter1>& __x, const move_iterator<_Iter2>& __y)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:1592:1: note: candidate template ignored: could not match '__wrap_iter' against '__list_iterator'
+operator-(const __wrap_iter<_Iter1>& __x, const __wrap_iter<_Iter2>& __y) _NOEXCEPT_DEBUG
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:553:11: note: candidate template ignored: could not match 'fpos' against '__list_iterator'
+streamoff operator-(const fpos<_StateT>& __x, const fpos<_StateT>& __y)
+          ^
+In file included from /Users/yifeix/git/cpp_adv/hw7/sort_wrapper.cpp:1:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/iostream:38:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/ios:216:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/__locale:15:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/string:500:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/string_view:176:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/__string:56:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm:3832:20: error: invalid operands to binary expression ('std::__1::__list_iterator<int, void *>' and 'std::__1::__list_iterator<int, void *>')
+    switch (__last - __first)
+            ~~~~~~ ^ ~~~~~~~
+/Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm:4072:32: note: in instantiation of function template specialization 'std::__1::__insertion_sort_incomplete<std::__1::__less<int, int> &, std::__1::__list_iterator<int, void *> >' requested here
+            bool __fs = _VSTD::__insertion_sort_incomplete<_Compare>(__first, __i, __comp);
+                               ^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm:4117:5: note: in instantiation of function template specialization 'std::__1::__sort<std::__1::__less<int, int> &, std::__1::__list_iterator<int, void *> >' requested here
+    __sort<_Comp_ref>(__first, __last, __comp);
+    ^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm:4126:12: note: in instantiation of function template specialization 'std::__1::sort<std::__1::__list_iterator<int, void *>, std::__1::__less<int, int> >' requested here
+    _VSTD::sort(__first, __last, __less<typename iterator_traits<_RandomAccessIterator>::value_type>());
+           ^
+/Users/yifeix/git/cpp_adv/hw7/sort_wrapper.cpp:8:10: note: in instantiation of function template specialization 'std::__1::sort<std::__1::__list_iterator<int, void *> >' requested here
+    std::sort(t.begin(),t.end());
+         ^
+/Users/yifeix/git/cpp_adv/hw7/sort_wrapper.cpp:16:5: note: in instantiation of function template specialization 'bad_sort<std::__1::list<int, std::__1::allocator<int> > >' requested here
+    bad_sort(l);
+    ^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:743:1: note: candidate template ignored: could not match 'reverse_iterator' against '__list_iterator'
+operator-(const reverse_iterator<_Iter1>& __x, const reverse_iterator<_Iter2>& __y)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:1184:1: note: candidate template ignored: could not match 'move_iterator' against '__list_iterator'
+operator-(const move_iterator<_Iter1>& __x, const move_iterator<_Iter2>& __y)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:1592:1: note: candidate template ignored: could not match '__wrap_iter' against '__list_iterator'
+operator-(const __wrap_iter<_Iter1>& __x, const __wrap_iter<_Iter2>& __y) _NOEXCEPT_DEBUG
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:553:11: note: candidate template ignored: could not match 'fpos' against '__list_iterator'
+streamoff operator-(const fpos<_StateT>& __x, const fpos<_StateT>& __y)
+          ^
+In file included from /Users/yifeix/git/cpp_adv/hw7/sort_wrapper.cpp:1:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/iostream:38:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/ios:216:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/__locale:15:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/string:500:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/string_view:176:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/__string:56:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm:3852:40: error: invalid operands to binary expression ('std::__1::__list_iterator<int, void *>' and 'int')
+    _RandomAccessIterator __j = __first+2;
+                                ~~~~~~~^~
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:761:1: note: candidate template ignored: could not match 'reverse_iterator<type-parameter-0-0>' against 'int'
+operator+(typename reverse_iterator<_Iter>::difference_type __n, const reverse_iterator<_Iter>& __x)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:1202:1: note: candidate template ignored: could not match 'move_iterator<type-parameter-0-0>' against 'int'
+operator+(typename move_iterator<_Iter>::difference_type __n, const move_iterator<_Iter>& __x)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:1618:1: note: candidate template ignored: could not match '__wrap_iter<type-parameter-0-0>' against 'int'
+operator+(typename __wrap_iter<_Iter>::difference_type __n,
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:3993:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator+(const basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4006:1: note: candidate template ignored: could not match 'const _CharT *' against 'std::__1::__list_iterator<int, void *>'
+operator+(const _CharT* __lhs , const basic_string<_CharT,_Traits,_Allocator>& __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4018:1: note: candidate template ignored: could not match 'basic_string<type-parameter-0-0, type-parameter-0-1, type-parameter-0-2>' against 'int'
+operator+(_CharT __lhs, const basic_string<_CharT,_Traits,_Allocator>& __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4029:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator+(const basic_string<_CharT, _Traits, _Allocator>& __lhs, const _CharT* __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4041:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator+(const basic_string<_CharT, _Traits, _Allocator>& __lhs, _CharT __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4055:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator+(basic_string<_CharT, _Traits, _Allocator>&& __lhs, const basic_string<_CharT, _Traits, _Allocator>& __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4063:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator+(const basic_string<_CharT, _Traits, _Allocator>& __lhs, basic_string<_CharT, _Traits, _Allocator>&& __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4071:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator+(basic_string<_CharT, _Traits, _Allocator>&& __lhs, basic_string<_CharT, _Traits, _Allocator>&& __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4079:1: note: candidate template ignored: could not match 'const _CharT *' against 'std::__1::__list_iterator<int, void *>'
+operator+(const _CharT* __lhs , basic_string<_CharT,_Traits,_Allocator>&& __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4087:1: note: candidate template ignored: could not match 'basic_string<type-parameter-0-0, type-parameter-0-1, type-parameter-0-2>' against 'int'
+operator+(_CharT __lhs, basic_string<_CharT,_Traits,_Allocator>&& __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4096:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator+(basic_string<_CharT, _Traits, _Allocator>&& __lhs, const _CharT* __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4104:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator+(basic_string<_CharT, _Traits, _Allocator>&& __lhs, _CharT __rhs)
+^
+In file included from /Users/yifeix/git/cpp_adv/hw7/sort_wrapper.cpp:1:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/iostream:38:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/ios:216:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/__locale:15:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/string:500:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/string_view:176:
+In file included from /Library/Developer/CommandLineTools/usr/include/c++/v1/__string:56:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm:3853:39: error: invalid operands to binary expression ('std::__1::__list_iterator<int, void *>' and 'int')
+    __sort3<_Compare>(__first, __first+1, __j, __comp);
+                               ~~~~~~~^~
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:761:1: note: candidate template ignored: could not match 'reverse_iterator<type-parameter-0-0>' against 'int'
+operator+(typename reverse_iterator<_Iter>::difference_type __n, const reverse_iterator<_Iter>& __x)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:1202:1: note: candidate template ignored: could not match 'move_iterator<type-parameter-0-0>' against 'int'
+operator+(typename move_iterator<_Iter>::difference_type __n, const move_iterator<_Iter>& __x)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iterator:1618:1: note: candidate template ignored: could not match '__wrap_iter<type-parameter-0-0>' against 'int'
+operator+(typename __wrap_iter<_Iter>::difference_type __n,
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:3993:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator+(const basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4006:1: note: candidate template ignored: could not match 'const _CharT *' against 'std::__1::__list_iterator<int, void *>'
+operator+(const _CharT* __lhs , const basic_string<_CharT,_Traits,_Allocator>& __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4018:1: note: candidate template ignored: could not match 'basic_string<type-parameter-0-0, type-parameter-0-1, type-parameter-0-2>' against 'int'
+operator+(_CharT __lhs, const basic_string<_CharT,_Traits,_Allocator>& __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4029:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator+(const basic_string<_CharT, _Traits, _Allocator>& __lhs, const _CharT* __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4041:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator+(const basic_string<_CharT, _Traits, _Allocator>& __lhs, _CharT __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4055:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator+(basic_string<_CharT, _Traits, _Allocator>&& __lhs, const basic_string<_CharT, _Traits, _Allocator>& __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4063:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator+(const basic_string<_CharT, _Traits, _Allocator>& __lhs, basic_string<_CharT, _Traits, _Allocator>&& __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4071:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator+(basic_string<_CharT, _Traits, _Allocator>&& __lhs, basic_string<_CharT, _Traits, _Allocator>&& __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4079:1: note: candidate template ignored: could not match 'const _CharT *' against 'std::__1::__list_iterator<int, void *>'
+operator+(const _CharT* __lhs , basic_string<_CharT,_Traits,_Allocator>&& __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4087:1: note: candidate template ignored: could not match 'basic_string<type-parameter-0-0, type-parameter-0-1, type-parameter-0-2>' against 'int'
+operator+(_CharT __lhs, basic_string<_CharT,_Traits,_Allocator>&& __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4096:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator+(basic_string<_CharT, _Traits, _Allocator>&& __lhs, const _CharT* __rhs)
+^
+/Library/Developer/CommandLineTools/usr/include/c++/v1/string:4104:1: note: candidate template ignored: could not match 'basic_string' against '__list_iterator'
+operator+(basic_string<_CharT, _Traits, _Allocator>&& __lhs, _CharT __rhs)
+^
+8 errors generated.
+make[2]: *** [CMakeFiles/build/sort.dir/sort_wrapper.cpp.o] Error 1
+make[1]: *** [CMakeFiles/build/sort.dir/all] Error 2
+make: *** [all] Error 2

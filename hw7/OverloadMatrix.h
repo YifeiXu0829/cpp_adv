@@ -20,7 +20,6 @@ using std::endl;
 using std::ostringstream;
 using std::streamsize;
 using std::setw;
-using std::max;
 
 namespace mpcs51044 {
 
@@ -86,10 +85,10 @@ private:
 		return std::max(acc, ostr.str().size());
 	}
 	static size_t accumulateMaxRow(size_t acc, array<T, cols> row) {
-		return std::max(acc, accumulate(row.begin(), row.end(), static_cast<size_t>(0), accumulateMax));
+		return std::max(acc, accumulate(row.begin(), row.end(), size_t(0), accumulateMax));
 	}
 	size_t longestElementSize() const {
-		return accumulate(data.begin(), data.end(), 0, accumulateMaxRow);
+		return accumulate(data.begin(), data.end(), size_t(0), accumulateMaxRow);
 	}
 	array<array<T, cols>, rows> data;
 };
@@ -100,24 +99,25 @@ determinantImpl(const Matrix<T, h, w> &m)
 {
 	T val = 0;
 	for (int i = 0; i < h; i++) {
-		val = (i % 2 ? -1 : 1) * m(i, 0) * m.minor(i, 0).determinant();
+		val += (i % 2 ? -1 : 1) * m(i, 0) * m.minor(i, 0).determinant();
 	}
 	return val;
 }
 
 template<class T>
 T
-determinantImpl(const Matrix<T, 1, 1> &m)
+determinantImpl(Matrix<T, 1, 1> const &m)
 {
 	return m(0, 0);
 }
 
-
 template<class T>
-T determinantImpl(const Matrix<T, 2, 2> &m)
+T
+determinantImpl(Matrix<T, 2, 2> const &m)
 {
-     return m(0, 0)*m(1,1) - m(1,0)*m(0,1);
+  return m(0, 0)*m(1, 1) - m(0, 1)*m(1, 0);
 }
+
 
 template<class T, int h, int w>
 T
@@ -125,6 +125,7 @@ Matrix<T, h, w>::determinant() const
 {
 	return determinantImpl(*this);
 }
+
 template<typename T, int a, int b, int c>
 inline Matrix<T, a, c>
 operator*(Matrix<T, a, b> const &l, Matrix<T, b, c> const &r)
@@ -138,6 +139,16 @@ operator*(Matrix<T, a, b> const &l, Matrix<T, b, c> const &r)
 			result(i, j) = total;
 		}
 	}
+}
+
+template<typename T, int a, int b>
+inline Matrix<T, a, b>
+operator+(Matrix<T, a, b> const &l, Matrix<T, a, b> const &r)
+{
+	Matrix<a, b> result;
+	for (int i = 0; i < a; i++)
+		for (int j = 0; j < b; j++)
+			result(i, j) = l(i, j) + r(i, j);
 	return result;
 }
 }

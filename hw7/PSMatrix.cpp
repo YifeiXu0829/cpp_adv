@@ -1,4 +1,4 @@
-#include "OverloadMatrix.h"
+#include "PSMatrix.h"
 #include <iostream>
 #include <chrono>
 using namespace mpcs51044;
@@ -16,7 +16,6 @@ int main()
 	for (int i = 0; i < 100'000'000; i++) {
 		m(1, 1) = i;
 		total += m.determinant();
-        //total += i;
 	}
 	cout << m;
 	cout << chrono::duration<double>(chrono::system_clock::now() - start).count() << " seconds\n";

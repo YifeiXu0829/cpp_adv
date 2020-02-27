@@ -1,0 +1,6 @@
+
+
+By adding template specialization for 2x2 matrix determinant for 3 programs, the run time of all 3 programs nearly decreased by half. (from around 60 seconds run time down to about 30 seconds)
+
+Conclusion:
+Certainly the compiler did not calculate the result of determinant of input matrix at compile time, otherwise we will get the total in a blink. I guess the reason is that logic is too complicated for the compiler to unroll all and apply template initialization and calculation at compile time. However, by specialization of one size of matrix does improve the performance a lot (x2). I guess the recursion must have take a lot of (nearly half of all) calls to get the determinant of 2x2 size matrix at run time. By making a specialization of determinant of that size matrix, it saves nearly half the jobs calculating of that percific task.

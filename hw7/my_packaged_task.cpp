@@ -22,11 +22,11 @@ class My_Packaged_Task<R(Args...)>
             //func_ = std::forward<F>(f);
 	    }
         
-        template<>
-        My_Packaged_Task(My_Packaged_Task&) = delete;
+        //template<>
+        //My_Packaged_Task(const My_Packaged_Task &) = delete;
 
-        template<typename R1, typename ... Args1> // WHY ????? What the hell happened !???
-        My_Packaged_Task& operator= (My_Packaged_Task&) = delete;
+        //template<typename R1, typename ... Args1> // WHY ????? What the hell happened !???
+        //My_Packaged_Task& operator= (My_Packaged_Task const&) = delete;
 
         auto get_future()
         {

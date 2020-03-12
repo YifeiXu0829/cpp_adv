@@ -78,6 +78,7 @@ Setting::factory(string configLine)
 	auto firstSpace = configLine.find_first_of(' ');
 	string name{ configLine.substr(0, firstSpace) };
 	string rawValue{ configLine.substr(firstSpace + 1) };
+    std::cout<<name<<" : "<<rawValue<<std::endl;
 	if (rawValue[0] == '"')
 		return make_unique<StringSetting>(name, rawValue.substr(1, rawValue.size() - 2));
 	else if (rawValue == "true")

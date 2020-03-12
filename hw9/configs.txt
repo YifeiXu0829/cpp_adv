@@ -1,3 +1,3 @@
-deviceName "Millenium Falcon""
+deviceName "Tesla Soar"
 maxVoltage 1000000
 enableHyperdrive true

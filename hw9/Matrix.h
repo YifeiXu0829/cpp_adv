@@ -82,15 +82,26 @@ public:
 	}
 
 	double determinant() const {
-		static_assert(rows == cols, "Sorry, can only take determinants of square matrices");
-		double val = 0;
-		for (int i = 0; i < rows; i++) {
-			val += (i % 2 ? -1 : 1)
-				* data[i][0]
-				* minor(i, 0).determinant();
-		}
-		return val;
-	}
+        static_assert(rows == cols, "Sorry, can only take determinants of square matrices");
+
+        if constexpr (rows == 1)
+        {
+            return data[0][0];
+        }
+        else if constexpr(rows == 2)
+        {
+            return data[0][0]*data[1][1] - data[0][1]-data[1][0];
+        }
+        else{
+            double val = 0;
+            for (int i = 0; i < rows; i++) {
+                val += (i % 2 ? -1 : 1)
+                    * data[i][0]
+                    * minor(i, 0).determinant();
+            }
+            return val;
+	    }
+    }
 
 private:
 	static size_t accumulateMax(size_t acc, double d) {
@@ -107,6 +118,7 @@ private:
 	array<array<double, cols>, rows> data;
 };
 
+/*
 template<>
 double
 Matrix<1, 1>::determinant() const
@@ -120,7 +132,7 @@ Matrix<2, 2>::determinant() const
 {
   return data[0][0]*data[1][1] - data[0][1]*data[1][0];
 }
-
+*/
 
 template<int a, int b, int c>
 inline Matrix<a, c>

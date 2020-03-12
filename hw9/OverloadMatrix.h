@@ -103,7 +103,7 @@ determinantImpl(const Matrix<T, h, w> &m)
 	}
 	return val;
 }
-
+/*
 template<class T>
 T
 determinantImpl(Matrix<T, 1, 1> const &m)
@@ -117,24 +117,24 @@ determinantImpl(Matrix<T, 2, 2> const &m)
 {
   return m(0, 0)*m(1, 1) - m(0, 1)*m(1, 0);
 }
-
+*/
 
 template<class T, int h, int w>
 T
 Matrix<T, h, w>::determinant() const
 {
+
     if constexpr (h==w && h==1)
     {
         return (*this)(0,0);
     }
-    
-    if constexpr (h==w && h==2)
+    else if constexpr (h==w && h==2)
     {
         return (*this)(0,0)*(*this)(1,1) - (*this)(0,1)* (*this)(1,0);
     }
-
-	return determinantImpl(*this);
-    
+    else{
+        return determinantImpl(*this);
+    }
 }
 
 template<typename T, int a, int b, int c>
